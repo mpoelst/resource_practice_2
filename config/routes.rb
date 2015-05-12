@@ -70,3 +70,4 @@ Rails.application.routes.draw do
   get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy' })
   #------------------------------
 end
+#
