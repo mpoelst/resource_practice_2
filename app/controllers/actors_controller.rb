@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
   def index
-    @actors = Actor.page(params[:page])
+    @actors = Actor.all
   end
 
   def show
@@ -45,4 +45,4 @@ class ActorsController < ApplicationController
     @actor.destroy
   end
 end
-#
+##
