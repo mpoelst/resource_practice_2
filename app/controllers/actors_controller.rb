@@ -11,15 +11,15 @@ class ActorsController < ApplicationController
   end
 
   def create_row
-    @actor = Actor.new
-    @actor.dob = params[:dob]
-    @actor.name = params[:name]
-    @actor.bio = params[:bio]
-    @actor.image_url = params[:image_url]
+    a = Actor.new
+    a.dob = params[:dob]
+    a.name = params[:name]
+    a.bio = params[:bio]
+    a.image_url = params[:image_url]
 
-    @actor.save
+    a.save
 
-    render("show")
+    redirect_to ("http://localhost:3000/actors/#{a.id}")
   end
 
   def edit_form
@@ -45,3 +45,4 @@ class ActorsController < ApplicationController
     @actor.destroy
   end
 end
+##

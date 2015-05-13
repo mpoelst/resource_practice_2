@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
 
     m.save
 
-    redirect_to ("http://localhost:3000/movies/:id")
+    redirect_to ("http://localhost:3000/movies/#{m.id}")
   end
 
   def edit_form
@@ -43,9 +43,9 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    @movie = Movie.find(params[:id])
+    m = Movie.find(params[:id])
 
-    @movie.destroy
+    m.destroy
   end
 end
- #
+ ##
