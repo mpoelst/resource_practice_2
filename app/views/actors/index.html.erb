@@ -35,7 +35,7 @@
           </a>
         </td>
         <td>
-          <a href="/delete_actor" class="btn btn-danger">
+          <a href="/delete_actor/<%= actor.id %>" class="btn btn-danger">
             <i class="fa fa-trash-o"></i>
           </a>
         </td>
@@ -44,4 +44,4 @@
   </tbody>
 </table>
 
-<%= paginate(@actors) %>
+
